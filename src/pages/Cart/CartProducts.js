@@ -6,6 +6,7 @@ import _ from "lodash";
 import {AlertStore} from "../../store/stores/alert.store";
 import {CartStore} from "../../store/stores/cart.store";
 import Loading from "../../components/Loading";
+import config from "../../api/config";
 
 const CartProducts = () => {
 	const {cart, remove, changeProductQuantity} = useContext(CartStore);
@@ -86,7 +87,7 @@ const CartProducts = () => {
 									<td>
 										<div className="d-flex align-items-center">
 											<div className="image w-25">
-												<img src={item.image} alt={item.name}/>
+												<img src={config.apiHost + item.image} alt={item.name}/>
 											</div>
 											<div className="name">
 												{item.name}

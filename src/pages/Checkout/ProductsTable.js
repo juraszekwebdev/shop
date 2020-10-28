@@ -1,4 +1,5 @@
 import React from 'react';
+import config from "../../api/config";
 
 const ProductsTable = props => {
 	const {products} = props;
@@ -20,7 +21,7 @@ const ProductsTable = props => {
 						<td>
 							<div className="d-flex align-items-center">
 								<div className="image w-25">
-									<img src={item.image} alt={item.name}/>
+									<img src={config.apiHost + item.image} alt={item.name}/>
 								</div>
 								<div className="name">
 									{item.name}
