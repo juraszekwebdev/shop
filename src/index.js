@@ -1,14 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import "./assets/scss/main.scss";
+import {BrowserRouter} from "react-router-dom";
+import {UserStateProvider} from "./store/stores/user.store";
+import {AlertStateProvider} from "./store/stores/alert.store";
+import {CartStateProvider} from "./store/stores/cart.store";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<BrowserRouter>
+			<UserStateProvider>
+				<AlertStateProvider>
+					<CartStateProvider>
+						<CartStateProvider>
+							<App/>
+						</CartStateProvider>
+					</CartStateProvider>
+				</AlertStateProvider>
+			</UserStateProvider>
+		</BrowserRouter>
+	</React.StrictMode>,
+	document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
