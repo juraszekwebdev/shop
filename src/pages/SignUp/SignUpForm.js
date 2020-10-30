@@ -60,7 +60,7 @@ const SignUpForm = () => {
 
 	return (
 		<form onSubmit={onSubmit} className="card">
-			<div className="card-body px-5 py-4">
+			<div className="card-body px-sm-5 py-sm-4">
 				<Alert/>
 				<div className="form-group">
 					<label htmlFor="email">Email address</label>

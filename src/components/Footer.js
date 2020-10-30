@@ -5,7 +5,7 @@ const Footer = () => {
 		<footer className="footer py-4 bg-darker text-white">
 			<div className="container">
 				<div className="row">
-					<div className="col-lg-4">
+					<div className="col-md-4 mb-4 mb-lg-0">
 						<h5 className="h5">O nas</h5>
 						<hr className="bg-secondary"/>
 						<p className="m-0">
@@ -14,7 +14,7 @@ const Footer = () => {
 							nulla sequi sint, sit sunt.
 						</p>
 					</div>
-					<div className="col-lg-4">
+					<div className="col-md-4 mb-4 mb-lg-0">
 						<h5 className="h5">Nawigacja</h5>
 						<hr className="bg-secondary"/>
 						<a href="/" className="d-block mb-2 text-white">Home</a>
@@ -24,7 +24,7 @@ const Footer = () => {
 						<a href="/contact" className="d-block text-white">Contact</a>
 
 					</div>
-					<div className="col-lg-4">
+					<div className="col-md-4">
 						<h5 className="h5">Dane kontaktowe</h5>
 						<hr className="bg-secondary"/>
 						<address>

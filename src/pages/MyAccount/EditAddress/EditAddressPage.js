@@ -6,12 +6,8 @@ const EditAddressPage = () => {
 	return (
 		<div className="container">
 			<div className="row">
-				<div className="col-lg-4">
-					<MyAccountNavigation/>
-				</div>
-				<div className="col-lg-8">
-					<EditAddressForm/>
-				</div>
+				<MyAccountNavigation/>
+				<EditAddressForm/>
 			</div>
 		</div>
 	);

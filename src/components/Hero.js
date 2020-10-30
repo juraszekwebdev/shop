@@ -15,11 +15,11 @@ const Hero = () => {
 							et expedita id officia quisquam, sit ut. Dicta dolor doloribus, ea ex pariatur quae quis
 							quisquam. Magni!
 						</p>
-						<NavLink to="/products" className="btn btn-lg btn-secondary w-50">
+						<NavLink to="/products" className="btn btn-lg btn-secondary w-lg-50">
 							<strong>Check our products</strong>
 						</NavLink>
 					</div>
-					<div className="col-lg-6">
+					<div className="col-lg-6 mt-5 mt-lg-0">
 						<img src={productImg} alt=""/>
 					</div>
 				</div>

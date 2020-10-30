@@ -67,7 +67,7 @@ const CartProducts = () => {
 		<React.Fragment>
 			{
 				isLoading ? <Loading /> :
-					<table className="table table-striped">
+					<table className="table table-striped cart-table">
 						<thead>
 						<tr>
 							<th>ID</th>

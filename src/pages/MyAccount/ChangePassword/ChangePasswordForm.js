@@ -32,57 +32,59 @@ const ChangePasswordForm = () => {
 	}
 
 	return (
-		<form onSubmit={onSubmit} className="card">
-			<div className="card-body">
-				<div className="card-title">
-					<h5 className="h5">Change password</h5>
-					<hr/>
+		<div className="col-lg-8">
+			<form onSubmit={onSubmit} className="card">
+				<div className="card-body">
+					<div className="card-title">
+						<h5 className="h5">Change password</h5>
+						<hr/>
+					</div>
+					<Alert/>
+					<div className="form-group">
+						<label htmlFor="password">Old password</label>
+						<input
+							type="password"
+							className="form-control"
+							name="oldPassword"
+							id="oldPassword"
+							placeholder="Old password"
+							value={user.oldPassword}
+							onChange={onChange}
+							required
+						/>
+					</div>
+					<div className="form-group">
+						<label htmlFor="password">New password</label>
+						<input
+							type="password"
+							className="form-control"
+							name="newPassword"
+							id="newPassword"
+							placeholder="New password"
+							value={user.newPassword}
+							onChange={onChange}
+							required
+						/>
+					</div>
+					<div className="form-group">
+						<label htmlFor="password">Repeat new password</label>
+						<input
+							type="password"
+							className="form-control"
+							name="repeatNewPassword"
+							id="repeatNewPassword"
+							placeholder="Repeat new password"
+							value={user.repeatNewPassword}
+							onChange={onChange}
+							required
+						/>
+					</div>
+					<div className="text-center">
+						<button type="submit" className="btn btn-primary">Change password</button>
+					</div>
 				</div>
-				<Alert/>
-				<div className="form-group">
-					<label htmlFor="password">Old password</label>
-					<input
-						type="password"
-						className="form-control"
-						name="oldPassword"
-						id="oldPassword"
-						placeholder="Old password"
-						value={user.oldPassword}
-						onChange={onChange}
-						required
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="password">New password</label>
-					<input
-						type="password"
-						className="form-control"
-						name="newPassword"
-						id="newPassword"
-						placeholder="New password"
-						value={user.newPassword}
-						onChange={onChange}
-						required
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="password">Repeat new password</label>
-					<input
-						type="password"
-						className="form-control"
-						name="repeatNewPassword"
-						id="repeatNewPassword"
-						placeholder="Repeat new password"
-						value={user.repeatNewPassword}
-						onChange={onChange}
-						required
-					/>
-				</div>
-				<div className="text-center">
-					<button type="submit" className="btn btn-primary">Change password</button>
-				</div>
-			</div>
-		</form>
+			</form>
+		</div>
 	);
 };
 

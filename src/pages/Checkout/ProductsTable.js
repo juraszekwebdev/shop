@@ -4,7 +4,7 @@ import config from "../../api/config";
 const ProductsTable = props => {
 	const {products} = props;
 	return (
-		<table className="table table-bordered">
+		<table className="table table-striped">
 			<thead>
 			<tr>
 				<th>ID</th>

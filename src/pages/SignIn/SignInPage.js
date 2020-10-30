@@ -5,7 +5,7 @@ const SignInPage = () => {
 	return (
 		<div className="container">
 			<div className="row">
-				<div className="col-5 m-auto">
+				<div className="col-lg-5 col-md-8 m-auto">
 					<SignInForm/>
 				</div>
 			</div>

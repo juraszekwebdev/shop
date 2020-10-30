@@ -43,78 +43,80 @@ const EditAddressForm = () => {
 	}
 
 	return (
-		<form onSubmit={onSubmit} className="card mb-3">
-			<div className="card-body">
-				<div className="card-title">
-					<h5 className="h5">Edit address</h5>
-					<hr/>
+		<div className="col-lg-8">
+			<form onSubmit={onSubmit} className="card mb-3">
+				<div className="card-body">
+					<div className="card-title">
+						<h5 className="h5">Edit address</h5>
+						<hr/>
+					</div>
+					<Alert/>
+					<div className="form-group">
+						<label htmlFor="city">City</label>
+						<input
+							type="text"
+							className="form-control"
+							name="city"
+							id="city"
+							value={address.city}
+							onChange={onChange}
+							required
+						/>
+					</div>
+					<div className="form-group">
+						<label htmlFor="firstName">Postal code</label>
+						<input
+							type="text"
+							className="form-control"
+							name="postalCode"
+							id="postalCode"
+							value={address.postalCode}
+							onChange={onChange}
+							required
+						/>
+					</div>
+					<div className="form-group">
+						<label htmlFor="street">Street</label>
+						<input
+							type="text"
+							className="form-control"
+							name="street"
+							id="street"
+							value={address.street}
+							onChange={onChange}
+							required
+						/>
+					</div>
+					<div className="form-group">
+						<label htmlFor="houseNumber">House number</label>
+						<input
+							type="text"
+							className="form-control"
+							name="houseNumber"
+							id="houseNumber"
+							value={address.houseNumber}
+							onChange={onChange}
+							required
+						/>
+					</div>
+					<div className="form-group">
+						<label htmlFor="apartmentNumber">Apartment number</label>
+						<input
+							type="text"
+							className="form-control"
+							name="apartmentNumber"
+							id="apartmentNumber"
+							value={address.apartmentNumber}
+							onChange={onChange}
+							required
+						/>
+					</div>
+					<div className="text-center">
+						<button type="submit" className="btn btn-primary">Update</button>
+					</div>
 				</div>
-				<Alert/>
-				<div className="form-group">
-					<label htmlFor="city">City</label>
-					<input
-						type="text"
-						className="form-control"
-						name="city"
-						id="city"
-						value={address.city}
-						onChange={onChange}
-						required
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="firstName">Postal code</label>
-					<input
-						type="text"
-						className="form-control"
-						name="postalCode"
-						id="postalCode"
-						value={address.postalCode}
-						onChange={onChange}
-						required
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="street">Street</label>
-					<input
-						type="text"
-						className="form-control"
-						name="street"
-						id="street"
-						value={address.street}
-						onChange={onChange}
-						required
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="houseNumber">House number</label>
-					<input
-						type="text"
-						className="form-control"
-						name="houseNumber"
-						id="houseNumber"
-						value={address.houseNumber}
-						onChange={onChange}
-						required
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="apartmentNumber">Apartment number</label>
-					<input
-						type="text"
-						className="form-control"
-						name="apartmentNumber"
-						id="apartmentNumber"
-						value={address.apartmentNumber}
-						onChange={onChange}
-						required
-					/>
-				</div>
-				<div className="text-center">
-					<button type="submit" className="btn btn-primary">Update</button>
-				</div>
-			</div>
-		</form>
+			</form>
+		</div>
 	);
 };
 

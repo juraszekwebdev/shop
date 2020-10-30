@@ -41,54 +41,56 @@ const EditPersonalDataForm = () => {
 	}
 
 	return (
-		<form onSubmit={onSubmit} className="card">
-			<div className="card-body">
-				<div className="card-title">
-					<h5 className="h5">Edit personal data</h5>
-					<hr/>
+		<div className="col-lg-8">
+			<form onSubmit={onSubmit} className="card">
+				<div className="card-body">
+					<div className="card-title">
+						<h5 className="h5">Edit personal data</h5>
+						<hr/>
+					</div>
+					<Alert/>
+					<div className="form-group">
+						<label htmlFor="firstName">First name</label>
+						<input
+							type="text"
+							className="form-control"
+							name="firstName"
+							id="firstName"
+							value={personalData.firstName}
+							onChange={onChange}
+							required
+						/>
+					</div>
+					<div className="form-group">
+						<label htmlFor="lastName">Last name</label>
+						<input
+							type="text"
+							className="form-control"
+							name="lastName"
+							id="lastName"
+							value={personalData.lastName}
+							onChange={onChange}
+							required
+						/>
+					</div>
+					<div className="form-group">
+						<label htmlFor="phoneNumber">Phone number</label>
+						<input
+							type="text"
+							className="form-control"
+							name="phoneNumber"
+							id="phoneNumber"
+							value={personalData.phoneNumber}
+							onChange={onChange}
+							required
+						/>
+					</div>
+					<div className="text-center">
+						<button type="submit" className="btn btn-primary">Update</button>
+					</div>
 				</div>
-				<Alert/>
-				<div className="form-group">
-					<label htmlFor="firstName">First name</label>
-					<input
-						type="text"
-						className="form-control"
-						name="firstName"
-						id="firstName"
-						value={personalData.firstName}
-						onChange={onChange}
-						required
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="lastName">Last name</label>
-					<input
-						type="text"
-						className="form-control"
-						name="lastName"
-						id="lastName"
-						value={personalData.lastName}
-						onChange={onChange}
-						required
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="phoneNumber">Phone number</label>
-					<input
-						type="text"
-						className="form-control"
-						name="phoneNumber"
-						id="phoneNumber"
-						value={personalData.phoneNumber}
-						onChange={onChange}
-						required
-					/>
-				</div>
-				<div className="text-center">
-					<button type="submit" className="btn btn-primary">Update</button>
-				</div>
-			</div>
-		</form>
+			</form>
+		</div>
 	);
 };
 

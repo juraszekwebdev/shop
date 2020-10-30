@@ -39,9 +39,8 @@ const Product = props => {
 		return product.quantity > 0;
 	}
 
-	console.log(product.image);
 	return (
-		<div className="col-xl-3">
+		<div className="col-sm-6 col-lg-4 col-xl-3">
 			<div className="product-wrapper text-darker bg-white">
 				<div className="product-image">
 					<img src={config.apiHost + product.image} alt=""/>

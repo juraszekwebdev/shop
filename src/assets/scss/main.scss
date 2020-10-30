@@ -67,11 +67,21 @@ img {
 	}
 }
 
+header {
+	.logo {
+		a {
+			@media screen and (max-width: map-get($grid-breakpoints, 'sm')) {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
 .card {
 	box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.15);
 
 	.card-body {
-		padding: 3em;
+		padding: 2em;
 	}
 }
 
@@ -149,17 +159,61 @@ table {
 .my-account-navigation {
 	background: $white;
 
+	@media screen and (max-width: map-get($grid-breakpoints, 'lg')) {
+		margin-bottom: 2em
+	}
+
 	ul {
 		list-style: none;
-		margin: 0;
 		padding: 0;
-		margin-top: 20px;
+		@media screen and (max-width: map-get($grid-breakpoints, 'md')) {
+			display: flex;
+			flex-wrap: wrap;
+		}
 
 		li {
-			line-height: 3;
-
 			a {
+				text-decoration: none;
+			}
+
+			@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
 				display: block;
+				a {
+					line-height: 3;
+				}
+			}
+
+			@media screen and (max-width: map-get($grid-breakpoints, 'lg')) {
+				display: inline-block;
+				a {
+					display: inline-block;
+					background-color: $light;
+					color: $dark;
+					height: 40px;
+					line-height: 40px;
+					padding: 0 15px;
+					margin-right: 5px;
+
+					&.active, &:hover, &:focus {
+						color: $white;
+						background-color: $secondary;
+					}
+				}
+			}
+
+			@media screen and (max-width: map-get($grid-breakpoints, 'md')) {
+				max-width: 50%;
+				flex: 1 1 50%;
+				margin-bottom: 5px;
+				a {
+					display: block;
+				}
+			}
+
+			@media screen and (max-width: map-get($grid-breakpoints, 'sm')) {
+				display: block;
+				max-width: 100%;
+				flex: 1 1 100%;
 			}
 		}
 	}
@@ -190,5 +244,158 @@ input[name="quantity"] {
 
 	p {
 		color: $gray-900;
+	}
+}
+
+.mobile-menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	background-color: $white;
+	width: 300px;
+	height: 100%;
+
+	.close-menu {
+		position: absolute;
+		top: 12px;
+		right: 15px;
+	}
+
+	ul {
+		list-style: none;
+		margin: 3.75em 0 0 0;
+		padding: 0;
+
+		li {
+			display: block;
+
+			a {
+				display: block;
+				line-height: 3;
+				padding: 0 1em;
+				font-size: 1rem;
+				border-bottom: solid 1px $light;
+
+				&.active {
+					background-color: $primary;
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, 'sm')) {
+	table {
+		thead {
+			display: none;
+		}
+
+		&.cart-table {
+			tbody {
+				td {
+					&:nth-child(1) {
+						border-top: solid 1px $border-color !important;
+
+						&::before {
+							content: '#';
+							display: inline-block;
+							font-weight: 400;
+						}
+					}
+					&:nth-child(3) {
+						&::before {
+							content: 'Price:';
+							display: inline-block;
+							margin-right: 3px;
+							font-weight: 400;
+						}
+					}
+					&:nth-child(4) {
+						&::before {
+							content: 'Quantity:';
+							display: inline-block;
+							margin-right: 3px;
+							font-weight: 400;
+						}
+
+						input {
+							margin: 0 auto;
+							display: inline-block;
+						}
+					}
+
+					.image {
+						width: auto !important;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+
+		&.order-table {
+			tbody {
+				td {
+					&:nth-child(1) {
+						border-top: solid 1px $border-color !important;
+
+						&::before {
+							content: 'Order ID:';
+							display: inline-block;
+							margin-right: 3px;
+							font-weight: 400;
+						}
+					}
+					&:nth-child(2) {
+						&::before {
+							content: 'Products:';
+							display: block;
+							font-weight: 400;
+						}
+					}
+					&:nth-child(3) {
+						&::before {
+							content: 'Price:';
+							display: inline-block;
+							margin-right: 3px;
+							font-weight: 400;
+						}
+
+						input {
+							margin: 0 auto;
+							display: inline-block;
+						}
+					}
+
+					.image {
+						width: auto !important;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+
+		tbody {
+			tr {
+				display: block;
+				margin-bottom: 1em;
+			}
+			td {
+				display: block;
+				text-align: center;
+				font-size: 1.2rem;
+				font-weight: 700;
+				border: 0 !important;
+				border-bottom: solid 1px $border-color !important;
+				border-right: solid 1px $border-color !important;
+				border-left: solid 1px $border-color !important;
+				background-color: $light !important;
+
+				.d-flex {
+					justify-content: center;
+				}
+			}
+		}
 	}
 }
