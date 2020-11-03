@@ -1,4 +1,4 @@
-# Book Finder App
+# Store App
 Store App with user, cart, checkout system.
 
 Demo version: [LINK](https://pj-store.netlify.app/)
