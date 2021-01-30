@@ -10,11 +10,11 @@ const EditAddressForm = props => {
 	const {user, login} = useContext(UserStore);
 	const {isRequired} = props;
 	const [address, setAddress] = useState({
-		city: user.address.city ?? "",
-		postalCode: user.address.postalCode ?? "",
-		street: user.address.street ?? "",
-		houseNumber: user.address.houseNumber ?? "",
-		apartmentNumber: user.address.apartmentNumber ?? "",
+		city: user.address !== null ? user.address.city ?? "" : "",
+		postalCode: user.address !== null ? user.address.postalCode ?? "" : "",
+		street: user.address !== null ? user.address.street ?? "" : "",
+		houseNumber: user.address !== null ? user.address.houseNumber ?? "" : "",
+		apartmentNumber: user.address !== null ? user.address.apartmentNumber ?? "" : "",
 	});
 	const alertState = useContext(AlertStore);
 
