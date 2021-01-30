@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {useHistory} from "react-router";
 import CheckoutForm from "./CheckoutForm";
 import {CartStore} from "../../store/stores/cart.store";
@@ -12,6 +12,7 @@ const CheckoutPage = () => {
 		if (getProductsCount() < 1) {
 			history.push("/products");
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (

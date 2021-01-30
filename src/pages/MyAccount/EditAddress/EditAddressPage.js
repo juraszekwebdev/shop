@@ -7,7 +7,9 @@ const EditAddressPage = () => {
 		<div className="container">
 			<div className="row">
 				<MyAccountNavigation/>
-				<EditAddressForm/>
+				<div className="col-lg-8">
+					<EditAddressForm isRequired={false}/>
+				</div>
 			</div>
 		</div>
 	);

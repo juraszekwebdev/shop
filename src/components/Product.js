@@ -3,7 +3,6 @@ import Alert from "./Alert";
 import {ProductService} from "../service/product.service";
 import {AlertStore} from "../store/stores/alert.store";
 import {CartStore} from "../store/stores/cart.store";
-import Loading from "./Loading";
 import {faSpinner} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import config from "../api/config";

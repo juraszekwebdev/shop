@@ -1,4 +1,4 @@
-import React, {createContext, useEffect, useReducer} from "react";
+import React, {createContext, useReducer} from "react";
 import CartReducer from "../reducers/cart.reducer";
 import _ from "lodash";
 

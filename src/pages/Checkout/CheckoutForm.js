@@ -5,6 +5,7 @@ import {useHistory} from "react-router";
 import EditAddressForm from "../MyAccount/EditAddress/EditAddressForm";
 import {UserStore} from "../../store/stores/user.store";
 import {CartStore} from "../../store/stores/cart.store";
+import {AlertStore} from "../../store/stores/alert.store";
 
 const CheckoutForm = () => {
 	const {user} = useContext(UserStore);
@@ -13,6 +14,7 @@ const CheckoutForm = () => {
 		paymentMethod: "",
 	});
 	const {cart, getTotals, clear} = useContext(CartStore);
+	const {set: setAlert} = useContext(AlertStore);
 	const history = useHistory();
 
 	const completeOrder = () => {
@@ -29,6 +31,15 @@ const CheckoutForm = () => {
 			},
 			orderId
 		};
+		if(user.address.city === "" ||
+			user.address.postalCode === "" ||
+			user.address.street === "" ||
+			user.address.houseNumber === "" ||
+			user.address.apartmentNumber === "") {
+			setAlert("danger", "Address must be filled.");
+			window.location.href = "#address-form"
+			return false;
+		}
 		OrderService.add({
 			orderData,
 		}).then(response => {
@@ -55,8 +66,8 @@ const CheckoutForm = () => {
 	}
 
 	return (
-		<>
-			{user.address === null && <EditAddressForm />}
+		<div>
+			<EditAddressForm isRequired={true} />
 			<div className="card">
 				<div className="card-body">
 					<div className="row">
@@ -191,7 +202,7 @@ const CheckoutForm = () => {
 					</form>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 
