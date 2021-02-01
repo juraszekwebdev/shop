@@ -4,9 +4,10 @@ Its connected to custom API written in Symfony (PHP).
 
 Demo version: [LINK](https://pj-store.netlify.app)
 
-Test user access:
-Email: test@domain.com
-Password: test123
+### Test user access:
+### Email: test@domain.com
+### Password: test123
+
 
 ## Running project
 
