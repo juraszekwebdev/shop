@@ -3,10 +3,8 @@ Store App is an e-commerce shop platform with authentication, products, cart and
 
 Demo: [LINK](https://pj-store.netlify.app)
 
-Test user access:
-
+## Test user:
 Email: test@domain.com
-
 Password: test123
 
 ## Running project locally
