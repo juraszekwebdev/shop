@@ -5,6 +5,7 @@ Demo: [LINK](https://pj-store.netlify.app)
 
 ## Test user:
 Email: test@domain.com
+
 Password: test123
 
 ## Running project locally
